@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { User } from "./api/user";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 function RandomUser() {
   const [user, setUser] = useState(null);
@@ -9,28 +9,9 @@ function RandomUser() {
     User.getUser().then(data => setUser(data.results[0]));
   }, []);
 
-  useEffect(() => {
-    if (user) {
-      const head = document.getElementsByTagName('head')[0];
-      const metaTitle = document.createElement('meta');
-      metaTitle.setAttribute('property', 'og:title');
-      metaTitle.setAttribute('content', `${user.name.first} ${user.name.last}`);
-      const metaURL = document.createElement('meta');
-      metaURL.setAttribute('property', 'og:url');
-      metaURL.setAttribute('content', user.email);
-      const metaImage = document.createElement('meta');
-      metaImage.setAttribute('property', 'og:image');
-      metaImage.setAttribute('content', user.picture.large);
-      document.getElementsByTagName('title')[0].innerText = `User - ${user.name.first} ${user.name.last}`;
-      head.appendChild(metaTitle);
-      head.appendChild(metaURL);
-      head.appendChild(metaImage);
-    }
-  }, [user]);
-
   return (
     <>
-      {/* {user && (
+      {user && (
         <Helmet>
           <title>{`User - ${user.name.first} ${user.name.last}`}</title>
           <meta
@@ -73,7 +54,7 @@ function RandomUser() {
             content={user.picture.large}
           />
         </Helmet>
-      )} */}
+      )}
       <div>
         {user && (
           <>

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import { HelmetProvider } from 'react-helmet-async';
 import AnotherRandomUser from './AnotherRandomUser';
 import BrowserRouterTest from './BrowserRouterTest';
 import HashRouterTest from './HashRouterTest';
@@ -12,21 +11,19 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <h1>Home</h1>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<BrowserRouterTest />} />       
-          <Route path="/random-user" element={<RandomUser />} />       
-        </Routes>
-      </BrowserRouter>
-      <HashRouter>
-        <Routes>
-          <Route index element={<HashRouterTest />} />       
-          <Route path="/another-random-user" element={<AnotherRandomUser />} />       
-        </Routes>
-      </HashRouter>
-    </HelmetProvider>
+    <h1>Home</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<BrowserRouterTest />} />       
+        <Route path="/random-user" element={<RandomUser />} />       
+      </Routes>
+    </BrowserRouter>
+    <HashRouter>
+      <Routes>
+        <Route index element={<HashRouterTest />} />       
+        <Route path="/another-random-user" element={<AnotherRandomUser />} />       
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 
