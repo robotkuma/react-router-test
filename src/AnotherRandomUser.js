@@ -33,7 +33,7 @@ function AnotherRandomUser() {
           />
           <meta
             property="og:image"
-            content={user.picture.thumbnail}
+            content={user.picture.large}
           />
           <meta name="twitter:card" content="summary" />
           <meta
@@ -50,8 +50,8 @@ function AnotherRandomUser() {
             content={`Hi, my name is ${user.name.first} ${user.name.last}. I'm ${user.registered.age} years old.`}
           />
           <meta
-            property="og:image"
-            content={user.picture.thumbnail}
+            property="twitter:image"
+            content={user.picture.large}
           />
         </Helmet>
       )}
