@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { User } from "./api/user";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function AnotherRandomUser() {
   const [user, setUser] = useState(null);
