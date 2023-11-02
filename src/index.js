@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import AnotherRandomUser from './AnotherRandomUser';
+import BrowserRouterTest from './BrowserRouterTest';
+import HashRouterTest from './HashRouterTest';
+import RandomUser from './RandomUser';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <h1>Home</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<BrowserRouterTest />} />       
+        <Route path="/random-user" element={<RandomUser />} />       
+      </Routes>
+    </BrowserRouter>
+    <HashRouter>
+      <Routes>
+        <Route index element={<HashRouterTest />} />       
+        <Route path="/another-random-user" element={<AnotherRandomUser />} />       
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 
