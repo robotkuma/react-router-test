@@ -11,50 +11,48 @@ function RandomUser() {
 
   return (
     <>
-      {user && (
-        <Helmet>
-          <title>{`User - ${user.name.first} ${user.name.last}`}</title>
-          <meta
-            name="description"
-            content={`Hi, my name is ${user.name.first} ${user.name.last}. I'm ${user.registered.age} years old.`}
-          />
-          <meta
-            property="og:title"
-            content={`${user.name.first} ${user.name.last}`}
-          />
-          <meta
-            property="og:url"
-            content={`${user.email}`}
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            name="og:description"
-            content={`Hi, my name is ${user.name.first} ${user.name.last}. I'm ${user.registered.age} years old.`}
-          />
-          <meta
-            property="og:image"
-            content={user.picture.large}
-          />
-          <meta name="twitter:card" content="summary" />
-          <meta
-            property="twitter:title"
-            content={`${user.name.first} ${user.name.last}`}
-          />
-          <meta
-            property="twitter:url"
-            content={`${user.email}`}
-          />
-          <meta property="twitter:type" content="website" />
-          <meta
-            name="twitter:description"
-            content={`Hi, my name is ${user.name.first} ${user.name.last}. I'm ${user.registered.age} years old.`}
-          />
-          <meta
-            property="twitter:image"
-            content={user.picture.large}
-          />
-        </Helmet>
-      )}
+      <Helmet>
+        <title>{`User - This is a user page`}</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas, accusamus sunt facere provident natus ratione quo voluptatem optio ipsum veritatis dolores sed quia exercitationem in accusantium deserunt repudiandae modi."
+        />
+        <meta
+          property="og:title"
+          content={`User page title`}
+        />
+        <meta
+          property="og:url"
+          content={`https://example.com`}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          name="og:description"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas, accusamus sunt facere provident natus ratione quo voluptatem optio ipsum veritatis dolores sed quia exercitationem in accusantium deserunt repudiandae modi."
+        />
+        <meta
+          property="og:image"
+          content="https://placehold.co/600x400/EEE/31343C"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="twitter:title"
+          content={`User page title`}
+        />
+        <meta
+          property="twitter:url"
+          content={`https://example.com`}
+        />
+        <meta property="twitter:type" content="website" />
+        <meta
+          name="twitter:description"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas, accusamus sunt facere provident natus ratione quo voluptatem optio ipsum veritatis dolores sed quia exercitationem in accusantium deserunt repudiandae modi."
+        />
+        <meta
+          property="twitter:image"
+          content="https://placehold.co/600x400/EEE/31343C"
+        />
+      </Helmet>
       <div>
         {user && (
           <>
